@@ -1,1 +1,1 @@
-web: python3 constants_bot.py
+web: python3 constants_list_bot.py

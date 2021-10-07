@@ -1,0 +1,10 @@
+This list is representation of a 3-level tree,,,,,,
+First level contains exactly two nodes: phys and math. Second level contains name of a subdivision of phys or math. Third level is where all constants are stored.,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+id,name,parent_id,value,unit,unit_system,is_constant
+phys,Physics,,,,,0
+math,Mathematics,,,,,0
+newton_mech,Newtonian Mechanics,phys,,,,0
+grav_const_SI,Gravitational constant,newton_mech,6.67430(15)*10^(-11),m^3/(kg*s^2),SI,1

@@ -1,0 +1,1 @@
+web: python3 constants_bot.py

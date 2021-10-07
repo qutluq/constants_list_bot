@@ -6,5 +6,6 @@ First level contains exactly two nodes: phys and math. Second level contains nam
 id,name,parent_id,value,unit,unit_system,is_constant
 phys,Physics,,,,,0
 math,Mathematics,,,,,0
-newton_mech,Newtonian Mechanics,phys,,,,0
-grav_const_SI,Gravitational constant,newton_mech,6.67430(15)*10^(-11),m^3/(kg*s^2),SI,1
+classical_mech,Classical Mechanics,phys,,,,0
+grav_const_SI,Gravitational constant,classical_mech,6.67430(15)*10^(-11),m^3/(kg*s^2),SI,1
+free_fall_acc_SI,Free fall acceleration(standard),classical_mech,9.80665,m/s^2,SI,1

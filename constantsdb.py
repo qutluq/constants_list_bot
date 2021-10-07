@@ -5,7 +5,7 @@ class ConstantsDB:
 
     def __init__(self):
 
-        self.db_df   = pd.read_csv('.\data\constants.csv', skiprows=5)
+        self.db_df   = pd.read_csv('data/constants.csv', skiprows=5)
         # copying id into index to use it in searches
         # while keeping id as a column makes it easy to use it in data extraction
         self.db_df.index = self.db_df.id

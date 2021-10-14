@@ -1,2 +1,3 @@
-# constants_bot
-This section is to be filled once first stable version is ready
+# constants_list_bot
+
+This is a telegram bot, it is intended to give instant info about math and physics constants.

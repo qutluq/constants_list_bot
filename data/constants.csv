@@ -1,11 +1,11 @@
 This list is representation of a 3-level tree,,,,,,
 First level contains exactly two nodes: phys and math. Second level contains name of a subdivision of phys or math. Third level is where all constants are stored.,,,,,,
+"id must be unique and not be longer than 15 symbols, or not greater than 64 bytes",,,,,,
 ,,,,,,
 ,,,,,,
-,,,,,,
-id,name,parent_id,value,unit,unit_system,is_constant
-phys,Physics,,,,,0
-math,Mathematics,,,,,0
-classical_mech,Classical Mechanics,phys,,,,0
-grav_const_SI,Gravitational constant,classical_mech,6.67430(15)*10^(-11),m^3/(kg*s^2),SI,1
-free_fall_acc_SI,Free fall acceleration(standard),classical_mech,9.80665,m/s^2,SI,1
+id,name,parent_id,value,unit,unit_system,alternative_names
+phys,Physics,,,,,
+math,Mathematics,,,,,
+classical_mech,Classical Mechanics,phys,,,,
+grav_const_SI,Gravitational constant,classical_mech,6.67430(15)*10^(-11),m^3/(kg*s^2),SI,"grav const, grav constant"
+free_fall_acc_SI,Free fall acceleration(standard),classical_mech,9.80665,m/s^2,SI,"free fall, free fall acc"

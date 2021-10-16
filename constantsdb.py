@@ -3,6 +3,10 @@ import numpy as np
 
 class ConstantsDB:
 
+    '''Class contains a tree of three levels. Topmost level contains two root nodes: math and phys.
+    Second level contains subdivisions of math or phys. The third level contains leafs \
+    which are values of constants.'''
+
     def __init__(self):
 
         self.db_df   = pd.read_csv('data/constants.csv', skiprows=5)
@@ -30,11 +34,11 @@ class ConstantsDB:
             return [{col:df.loc[idx,col] for col in df.columns} for idx in df.index]
         
         return None
-
-
+        
     def get_first_level_parents(self):
         
-        pass
+        df = self.db_df[self.db_df.parent_id == ''].sort_values('name')
+        return [{col:df.loc[idx,col] for col in df.columns} for idx in df.index]
 
     def search(self, name):
         """Search constant by its name"""

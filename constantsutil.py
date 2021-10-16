@@ -17,3 +17,16 @@ def is_root_node(const):
     '''
 
     return const['parent_id'] == ''
+
+def get_menuitems_id(menu_items, item_name):
+    '''return id of `item_name` string if it is present in menu_items list'''
+    
+    names = [item['name'].lower() for item in menu_items]
+    ids   = [item['id'] for item in menu_items]
+    
+    try:
+        idx = names.index(item_name.lower())
+    except:
+        return None
+    
+    return ids[idx]

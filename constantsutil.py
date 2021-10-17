@@ -5,16 +5,20 @@ def is_constant(const):
     {'id': 'math',  'name': 'Mathematics',  'parent_id': '',  \
         'value': '',  'unit': '', 'unit_system': ''}
     '''
+    if const == None:
+        return None
 
     return const['value'] != ''
 
-def is_root_node(const):
+def is_topmost_node(const):
     '''Returns True if const in the topmost level folder, False otherwise.
     
     const is a dict with the following keys: 
     {'id': 'math',  'name': 'Mathematics',  'parent_id': '',  \
         'value': '',  'unit': '', 'unit_system': ''}
     '''
+    if const == None:
+        return None
 
     return const['parent_id'] == ''
 

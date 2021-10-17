@@ -53,6 +53,23 @@ class ConstantsDB:
         
         return None
 
+    def get_level(self, id):
+        '''return level of constnant_db item(folder/constant)
+        args id - id of constnant_db item'''
+
+        item = self.get_item(id)
+
+        current_level = 0
+        if item:
+            if item['parent_id'] == '':
+                current_level = 1
+            elif item['value'] == '':
+                current_level = 2
+            else:
+                current_level = 3
+
+        return current_level        
+
     def get_children(self, parent_id):
         
         parent_id = parent_id.strip()

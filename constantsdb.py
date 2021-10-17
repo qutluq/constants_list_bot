@@ -1,19 +1,47 @@
 import pandas as pd
 import numpy as np
+from difflib import get_close_matches
 
 class ConstantsDB:
 
-    '''Class contains a tree of three levels. Topmost level contains two root nodes: math and phys.
+    '''Class contains a tree of three levels. Topmost level contains two topmost nodes: math and phys.
     Second level contains subdivisions of math or phys. The third level contains leafs \
     which are values of constants.'''
 
     def __init__(self):
 
-        self.db_df   = pd.read_csv('data/constants.csv', skiprows=5)
+        self.db_df             = self.__load_database__()                    
+        self.df_possible_names = self.__load_possible_names_df__()
+        self.possible_names    = self.df_possible_names.name.to_list()
+        self.db_df.drop(columns=['alternative_names'], inplace = True)
+        
+    def __load_database__(self):
+        
+        db_df   = pd.read_csv('data/constants.csv', skiprows=5)
         # copying id into index to use it in searches
         # while keeping id as a column makes it easy to use it in data extraction
-        self.db_df.index = self.db_df.id
-        self.db_df = self.db_df.fillna(value='') # replace NaNs with empty string
+        db_df.index = db_df.id
+        db_df = db_df.fillna(value='') # replace NaNs with empty string
+        return db_df
+
+    def __load_possible_names_df__(self):
+
+        df = self.db_df
+        data = []
+        columns = ['id', 'name']
+        for id in df.id:
+            name = df.loc[id,'name']
+            data.append(dict(zip(columns,[id, name.strip().lower()])))
+            
+            alternative_names = df.loc[id,'alternative_names'].strip()
+            if alternative_names == '':
+                continue
+            
+            alternative_names = alternative_names.split(',')
+            for name in alternative_names:
+                data.append(dict(zip(columns,[id, name.strip().lower()])))
+                    
+        return pd.DataFrame(data)
 
     def get_item(self, id):
         
@@ -41,6 +69,13 @@ class ConstantsDB:
         return [{col:df.loc[idx,col] for col in df.columns} for idx in df.index]
 
     def search(self, name):
-        """Search constant by its name"""
+        """Search constant by its name. The closest match is returned."""
 
-        pass
+        name = name.lower().strip()
+        exact_names = get_close_matches(name, self.possible_names, n=1)
+        if not exact_names:
+            return None
+        else:
+            exact_name = exact_names[0]
+            id = self.df_possible_names[self.df_possible_names['name'] == exact_name].index[0]        
+            return self.df_possible_names.loc[id, 'id']

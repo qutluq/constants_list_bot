@@ -1,4 +1,4 @@
-This list is representation of a 4-level tree,,,,,,,
+This list is representation of a 3-level tree,,,,,,,
 First level contains exactly two nodes: phys and math. Second level contains name of a subdivision of phys or math. Third level is where all constants are stored.,,,,,,,
 ,,,,,,,
 ,,,,,,,
@@ -6,23 +6,31 @@ First level contains exactly two nodes: phys and math. Second level contains nam
 id,name,parent_id,symbol,value,unit,unit_system,alternative_names
 phys,Physics,,,,,,
 classical_mech,Classical Mechanics,phys,,,,,
-grav_const_SI,Gravitational constant,classical_mech,G,6.67430(15)*10^(-11),m^3/(kg*s^2),SI,"grav const, grav constant"
-free_fll_acc_SI,Free fall acceleration(standard),classical_mech,g,9.80665,m/s^2,SI,"free fall, free fall acc"
+grav_const_SI,Gravitational constant,classical_mech,G,6.67430(15)*10^(-11),m^3/(kg*s^2),SI,"grav const, grav constant, гравитациялик константа"
+free_fll_acc_SI,Free fall acceleration(standard),classical_mech,g,9.80665,m/s^2,SI,"free fall, free fall acc, әркин чүшүш чапсанлиғи"
 electro_dyn,Electrodynamics,phys,,,,,
-coul_const,Coulomb constant,electro_dyn,"k_e, k or K",8.9875517923(14)*10^9,kg*m^3*s^(−2)*C^(−2),SI,Coulomb
-vac_permit,Vacuum permittivity,electro_dyn,ε_0,8.8541878128(13)*10^(−12),F/m,SI,"epsilon nought, epsilon zero, electric constant"
-speed_light,Speed of light,electro_dyn,c,299792458,m/s,SI,light speed
-vac_permeab,Vacuum permeability,electro_dyn,μ_0,1.25663706212(19)*10(−6),H/m,SI,"magnetic constant,  magnetic permeability"
-fine_struct_const,Fine-structure constant,electro_dyn,α,≈1/137,,,"Sommerfeld's constant, alpha"
+coul_const,Coulomb constant,electro_dyn,"k_e, k or K",8.9875517923(14)*10^9,kg*m^3*s^(−2)*C^(−2),SI,"Coulomb, Кулон константиси"
+vac_permit,Vacuum permittivity,electro_dyn,ε_0,8.8541878128(13)*10^(−12),F/m,SI,"epsilon nought, epsilon zero, electric constant, эпсилон, епсилон"
+speed_light,Speed of light,electro_dyn,c,299792458,m/s,SI,"light speed, йоруқлуқ илдамлиғи"
+vac_permeab,Vacuum permeability,electro_dyn,μ_0,1.25663706212(19)*10(−6),H/m,SI,"magnetic constant,  magnetic permeability, магнитлиқ константа"
+fine_struct_const,Fine-structure constant,electro_dyn,α,≈1/137,,,"Sommerfeld's constant, alpha, инчикә структура константиси"
+quantum_mech,Quantum Theory,phys,,,,,
+planck_const,Planck constant,quantum_mech,h,6.62607015*10^(−34),J*s,SI,"Planck's constant, Планк константиси"
+red_planck_const,Reduced Planck constant,quantum_mech,ħ,1.054571817...*10^(−34),J*s,SI,"Reduced Planck's constant, азайтилған Планк константиси"
+astronomy,Astronomy,phys,,,,,
+earth_mass,Earth mass,astronomy,M_🜨,5.97237*10^24,kg,SI,"Earth's mass, йәрниң массиси"
+earth_radius,Earth radius(mean),astronomy,R_🜨,6 371 000,m,SI,"Earth's radius, йәрниң радиуси"
+sun_mass,Sun mass,astronomy,M_☉,1.9885*10^30,kg,SI,"Sun's mass, күнниң массиси"
+sun_radius,Sun radius,astronomy,R_☉,6.95700*10^8,m,SI,"Sun's radius, күнниң радиуси"
 math,Mathematics,,,,,,
 geom,Geometry,math,,,,,
 pi,Pi,geom,π,3.1415926535...,,,
 arch,Architecture,math,,,,,
-gold_rat,Golden ratio,arch,φ,(1+sqrt(5))/2≈1.618033988...,,,phi
+gold_rat,Golden ratio,arch,φ,(1+sqrt(5))/2≈1.618033988...,,,"phi, алтун нисбәт"
 gen_math,General math,math,,,,,
-eul_num,Euler's number,gen_math,e,2.7182818284...,,,"e, euler"
+eul_num,Euler's number,gen_math,e,2.7182818284...,,,"e, euler, эйлер сани"
 chem,Chemistry,,,,,,
 thermodyn,Thermodynamics,chem,,,,,
-avogadro_const,Avogadro constant,thermodyn,N_A or L,6.02214076*10^23,1/mol,SI,avogadro
-boltz_const,Boltzmann constant,thermodyn,k_B or k,1.380649*10^(−23),J/K,SI,boltzmann
-gas_const,Universal gas constant,thermodyn,R,8.314462618,J/(K*mol),SI,gas const
+avogadro_const,Avogadro constant,thermodyn,N_A or L,6.02214076*10^23,1/mol,SI,"avogadro, Авогадро константиси"
+boltz_const,Boltzmann constant,thermodyn,k_B or k,1.380649*10^(−23),J/K,SI,"boltzmann, Больцман константиси"
+gas_const,Universal gas constant,thermodyn,R,8.314462618,J/(K*mol),SI,"gas const, универсал газ константиси"

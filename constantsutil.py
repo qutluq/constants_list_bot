@@ -34,3 +34,11 @@ def get_menuitems_id(menu_items, item_name):
         return None
     
     return ids[idx]
+
+def units_present(const):
+
+    if (const['unit'] != '') & (const['unit_system'] != ''):
+        
+        return True
+
+    return False

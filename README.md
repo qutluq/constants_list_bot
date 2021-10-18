@@ -1,3 +1,3 @@
-# constants_list_bot
+# Scientific constants list
 
-This is a telegram bot, it is intended to give instant info about math and physics constants.
+This is a telegram bot, it gives instant info about scientific constants' values.

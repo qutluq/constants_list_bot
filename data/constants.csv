@@ -8,7 +8,13 @@ phys,Physics,,,,,,
 classical_mech,Classical Mechanics,phys,,,,,
 grav_const_SI,Gravitational constant,classical_mech,G,6.67430(15)*10^(-11),m^3/(kg*s^2),SI,"grav const, grav constant"
 free_fll_acc_SI,Free fall acceleration(standard),classical_mech,g,9.80665,m/s^2,SI,"free fall, free fall acc"
-math,Mathematics,,,,,,
+electro_dyn,Electrodynamics,phys,,,,,
+coul_const,Coulomb constant,electro_dyn,"k_e, k or K",8.9875517923(14)*10^9,kg*m^3*s^(−2)*C^(−2),SI,Coulomb
+vac_permit,Vacuum permittivity,electro_dyn,ε_0,8.8541878128(13)*10^(−12),F/m,SI,"epsilon nought, epsilon zero, electric constant"
+speed_light,Speed of light,electro_dyn,c,299792458,m/s,SI,light speed
+vac_permeab,Vacuum permeability,electro_dyn,μ_0,1.25663706212(19)*10(−6),H/m,SI,"magnetic constant,  magnetic permeability"
+fine_struct_const,Fine-structure constant,electro_dyn,α,≈1/137,,,"Sommerfeld's constant, alpha"
+math,,,,,,,
 geom,Geometry,math,,,,,
 pi,Pi,geom,π,3.1415926535...,,,
 arch,Architecture,math,,,,,

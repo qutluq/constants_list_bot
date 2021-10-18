@@ -63,9 +63,9 @@ def display_constant_or_menuitems(message, parent_id):
             # it is leaf node i.e. constant, send constant value in a message
             const = db.get_item(parent_id)
 
-            message_text = f"{const['name']}\nvalue  : {const['value']}"            
+            message_text = f"{const['name']}\nsymbol : {const['symbol']}\nvalue  : {const['value']}"
             if c_util.units_present(const):
-                message_text = f"{const['name']}\nvalue  : {const['value']}\nunit   : {const['unit']}\nsystem : {const['unit_system']}"
+                message_text = f"{const['name']}\nsymbol : {const['symbol']}\nvalue  : {const['value']}\nunit   : {const['unit']}\nsystem : {const['unit_system']}"
 
             bot.send_message(chat_id=message.chat.id,
                             text=message_text,

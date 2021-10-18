@@ -1,22 +1,22 @@
-This list is representation of a 4-level tree,,,,,,
-First level contains exactly two nodes: phys and math. Second level contains name of a subdivision of phys or math. Third level is where all constants are stored.,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-id,name,parent_id,value,unit,unit_system,alternative_names
-phys,Physics,,,,,
-classical_mech,Classical Mechanics,phys,,,,
-grav_const_SI,Gravitational constant,classical_mech,6.67430(15)*10^(-11),m^3/(kg*s^2),SI,"grav const, grav constant"
-free_fll_acc_SI,Free fall acceleration(standard),classical_mech,9.80665,m/s^2,SI,"free fall, free fall acc"
-math,Mathematics,,,,,
-geom,Geometry,math,,,,
-pi,Pi,geom,3.1415926535...,,,
-arch,Architecture,math,,,,
-gold_rat,Golden ratio,arch,(1+sqrt(5))/2≈1.618033988...,,,phi
-gen_math,General math,math,,,,
-eul_num,Euler's number,gen_math,2.7182818284...,,,"e, euler"
-chem,Chemistry,,,,,
-thermodyn,Thermodynamics,chem,,,,
-avogadro_const,Avogadro constant,thermodyn,6.02214076*10^23,1/mol,SI,avogadro
-boltz_const,Boltzmann constant,thermodyn,1.380649*10^(−23),J/K,SI,boltzmann
-gas_const,Universal gas constant,thermodyn,8.314462618,J/(K*mol),SI,gas const
+This list is representation of a 4-level tree,,,,,,,
+First level contains exactly two nodes: phys and math. Second level contains name of a subdivision of phys or math. Third level is where all constants are stored.,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+id,name,parent_id,symbol,value,unit,unit_system,alternative_names
+phys,Physics,,,,,,
+classical_mech,Classical Mechanics,phys,,,,,
+grav_const_SI,Gravitational constant,classical_mech,G,6.67430(15)*10^(-11),m^3/(kg*s^2),SI,"grav const, grav constant"
+free_fll_acc_SI,Free fall acceleration(standard),classical_mech,g,9.80665,m/s^2,SI,"free fall, free fall acc"
+math,Mathematics,,,,,,
+geom,Geometry,math,,,,,
+pi,Pi,geom,π,3.1415926535...,,,
+arch,Architecture,math,,,,,
+gold_rat,Golden ratio,arch,φ,(1+sqrt(5))/2≈1.618033988...,,,phi
+gen_math,General math,math,,,,,
+eul_num,Euler's number,gen_math,e,2.7182818284...,,,"e, euler"
+chem,Chemistry,,,,,,
+thermodyn,Thermodynamics,chem,,,,,
+avogadro_const,Avogadro constant,thermodyn,N_A or L,6.02214076*10^23,1/mol,SI,avogadro
+boltz_const,Boltzmann constant,thermodyn,k_B or k,1.380649*10^(−23),J/K,SI,boltzmann
+gas_const,Universal gas constant,thermodyn,R,8.314462618,J/(K*mol),SI,gas const
